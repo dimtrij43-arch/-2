@@ -85,9 +85,10 @@
   <script>
     function check() {
       const pwd = document.getElementById('password').value;
-      const correctPassword = '7K1555'; // 
+      const correctPassword = '7K1555'; // ← Замени на свой пароль
       if (pwd === correctPassword && grecaptcha.getResponse() !== "") {
-        window.location.href = 'http://clasneiygoloc.tilda.ws/?access=7K1555';
+        // Открываем сайт в новой вкладке
+        window.open('http://clasneiygoloc.tilda.ws/?access=7K1555', '_blank');
       } else {
         document.getElementById('error').style.display = 'block';
       }
